@@ -25,10 +25,22 @@ public class Route extends BaseEntity{
     @ManyToOne
     private User author;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private Set<Category> categories;
 
+    @OneToMany(mappedBy = "route",fetch = FetchType.EAGER)
+    private Set<Picture> pictures;
+
     public Route() {
+    }
+
+    public Set<Picture> getPictures() {
+        return pictures;
+    }
+
+    public Route setPictures(Set<Picture> pictures) {
+        this.pictures = pictures;
+        return this;
     }
 
     public Set<Category> getCategories() {

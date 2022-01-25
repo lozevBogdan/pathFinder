@@ -53,4 +53,17 @@ public class UserServiceImpl implements UserService {
         currentUser.setUsername(null);
         currentUser.setId(null);
     }
+
+    @Override
+    public User findById(Long id) {
+       User user = userRepository.findById(id).orElse(null);
+
+       return user;
+    }
+
+    @Override
+    public boolean isNameExist(String username) {
+        return userRepository.findByUsername(username).isPresent();
+
+    }
 }
