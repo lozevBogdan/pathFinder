@@ -1,43 +1,31 @@
-package com.example.pathfinder.model.serviceModels;
+package com.example.pathfinder.model.viewModels;
 
 import com.example.pathfinder.model.entity.Category;
 import com.example.pathfinder.model.entity.Picture;
 import com.example.pathfinder.model.entity.User;
-import com.example.pathfinder.model.entity.enums.CategoryNameEnum;
 import com.example.pathfinder.model.entity.enums.LevelEnum;
 
 import javax.persistence.*;
 import java.util.Set;
 
-public class RouteServiceModel {
+public class RouteDetailsViewModel {
 
-    private Long id;
+
     private String description;
     private String gpxCoordinates;
     private LevelEnum level;
     private String name;
     private String videoUrl;
-    private User author;
-    private Set<CategoryNameEnum> categories;
     private Set<Picture> pictures;
 
-    public RouteServiceModel() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public RouteServiceModel setId(Long id) {
-        this.id = id;
-        return this;
+    public RouteDetailsViewModel() {
     }
 
     public String getDescription() {
         return description;
     }
 
-    public RouteServiceModel setDescription(String description) {
+    public RouteDetailsViewModel setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -46,7 +34,7 @@ public class RouteServiceModel {
         return gpxCoordinates;
     }
 
-    public RouteServiceModel setGpxCoordinates(String gpxCoordinates) {
+    public RouteDetailsViewModel setGpxCoordinates(String gpxCoordinates) {
         this.gpxCoordinates = gpxCoordinates;
         return this;
     }
@@ -55,7 +43,7 @@ public class RouteServiceModel {
         return level;
     }
 
-    public RouteServiceModel setLevel(LevelEnum level) {
+    public RouteDetailsViewModel setLevel(LevelEnum level) {
         this.level = level;
         return this;
     }
@@ -64,7 +52,7 @@ public class RouteServiceModel {
         return name;
     }
 
-    public RouteServiceModel setName(String name) {
+    public RouteDetailsViewModel setName(String name) {
         this.name = name;
         return this;
     }
@@ -73,26 +61,8 @@ public class RouteServiceModel {
         return videoUrl;
     }
 
-    public RouteServiceModel setVideoUrl(String videoUrl) {
+    public RouteDetailsViewModel setVideoUrl(String videoUrl) {
         this.videoUrl = videoUrl;
-        return this;
-    }
-
-    public User getAuthor() {
-        return author;
-    }
-
-    public RouteServiceModel setAuthor(User author) {
-        this.author = author;
-        return this;
-    }
-
-    public Set<CategoryNameEnum> getCategories() {
-        return categories;
-    }
-
-    public RouteServiceModel setCategories(Set<CategoryNameEnum> categories) {
-        this.categories = categories;
         return this;
     }
 
@@ -100,7 +70,7 @@ public class RouteServiceModel {
         return pictures;
     }
 
-    public RouteServiceModel setPictures(Set<Picture> pictures) {
+    public RouteDetailsViewModel setPictures(Set<Picture> pictures) {
         this.pictures = pictures;
         return this;
     }

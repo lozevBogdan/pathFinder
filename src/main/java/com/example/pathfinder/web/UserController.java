@@ -67,7 +67,7 @@ public class UserController {
                         addFlashAttribute("userRegisterBindingModel",userRegisterBindingModel);
                 redirectAttributes.
                         addFlashAttribute(
-                                "org.Springframework.validation.BindingResult.userRegisterBindingModel",
+                                "org.springframework.validation.BindingResult.userRegisterBindingModel",
                                 bindingResult);
               //  System.err.println(bindingResult.toString());
                 return "redirect:register";

@@ -1,6 +1,6 @@
 package com.example.pathfinder.model.entity;
 
-import com.example.pathfinder.model.entity.enums.LocalDateTime;
+import com.example.pathfinder.model.entity.enums.CategoryNameEnum;
 
 import javax.persistence.*;
 
@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class Category extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
-    private LocalDateTime name;
+    private CategoryNameEnum name;
 
     @Column(columnDefinition = "TEXT")
     private String description;
@@ -17,11 +17,11 @@ public class Category extends BaseEntity {
     public Category() {
     }
 
-    public LocalDateTime getName() {
+    public CategoryNameEnum getName() {
         return name;
     }
 
-    public Category setName(LocalDateTime name) {
+    public Category setName(CategoryNameEnum name) {
         this.name = name;
         return this;
     }

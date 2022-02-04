@@ -16,4 +16,5 @@ public interface UserService {
 
     boolean isNameExist(String username);
 
+    User findCurrentLoginUserEntity();
 }
